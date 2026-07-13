@@ -290,7 +290,33 @@ h1,h2,h3,h4{font-family:var(--font-head);font-weight:700;letter-spacing:-0.02em;
   color:var(--text-dim);
   font-size:16.5px;
   max-width:480px;
-  margin-bottom:38px;
+  margin-bottom:18px;
+}
+
+.hero-agency{
+  font-family:var(--font-head);
+  font-size:15px;
+  font-weight:600;
+  color:var(--accent-soft);
+  margin-bottom:28px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.hero-agency::before{
+  content:'';
+  width:24px;
+  height:1px;
+  background:var(--accent);
+  flex-shrink:0;
+}
+
+.hero-buttons{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  flex-wrap:wrap;
 }
 .hero-actions{display:flex;gap:16px;flex-wrap:wrap;}
 
@@ -1024,12 +1050,12 @@ footer{
     margin-bottom:35px;
   }
 
-  .contact-icon-row{
+.contact-icon-row{
     display:grid;
-    grid-template-columns:repeat(3, 1fr);
+    grid-template-columns:repeat(2, 1fr);
     gap:10px;
     width:100%;
-  }
+}
 
   .contact-big-icon{
     width:100%;
@@ -1186,27 +1212,7 @@ footer{
 
 }
 
-/* ===== EVENT FARM LAST CARD ===== */
-/* ===== EVENT FARM LAST CENTER CARD ===== */
 
-.eventfarm-card{
-    grid-column: 1 / -1;
-    width: 420px;
-    justify-self: center;
-}
-
-.eventfarm-card .wc-thumb{
-    width: 100%;
-    height: 290px;
-    overflow: hidden;
-}
-
-.eventfarm-card .client-logo{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
 
 
 
@@ -2091,6 +2097,125 @@ body{
 
   body{
     padding-top: 75px !important;
+  }
+
+}
+
+/* EVENT FARM LOGO FULL VIEW */
+
+img[alt="Event Farm"]{
+    width: 88%;
+    height: 88%;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* AADITYA JEWELLERS LOGO */
+
+.aaditya-logo{
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    transform: scale(1.15) !important;
+}
+
+/* BANGRE JEWELLERS LOGO */
+
+.bangre-logo{
+    width: 95% !important;
+    height: 95% !important;
+    object-fit: contain !important;
+    object-position: center !important;
+}
+
+/* KHARWADE JEWELLERS LOGO - BIG CIRCLE */
+
+.kharwade-logo{
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    transform: scale(1.15) !important;
+}
+
+/* =========================
+   MOBILE HERO FIX ONLY
+========================= */
+
+@media (max-width: 768px){
+
+  /* Agency text smaller */
+  .hero-agency{
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+    margin-bottom: 22px !important;
+    gap: 8px !important;
+    max-width: 320px !important;
+  }
+
+  .hero-agency::before{
+    width: 22px !important;
+  }
+
+  /* Buttons proper mobile size */
+  .hero-buttons{
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px !important;
+    width: 100% !important;
+  }
+
+  .hero-buttons .btn{
+    width: 82% !important;
+    max-width: 330px !important;
+    min-width: 0 !important;
+    height: 54px !important;
+    padding: 0 20px !important;
+    font-size: 16px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+}
+/* MOBILE BUTTON FIX ONLY */
+
+@media (max-width: 768px){
+
+  .hero-buttons{
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    gap: 10px !important;
+    width: 100% !important;
+  }
+
+  .hero-buttons .btn{
+    width: auto !important;
+    min-width: 125px !important;
+    max-width: none !important;
+    height: 46px !important;
+    padding: 0 16px !important;
+    font-size: 13px !important;
+    white-space: nowrap !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+}
+/* MOBILE BUTTON SIZE SMALLER ONLY */
+
+@media (max-width: 768px){
+
+  .hero-buttons .btn{
+    min-width: 110px !important;
+    height: 40px !important;
+    padding: 0 14px !important;
+    font-size: 12px !important;
   }
 
 }
